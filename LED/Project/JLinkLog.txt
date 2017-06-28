@@ -1,0 +1,27 @@
+
+T2A28 000:462 SEGGER J-Link V4.80g Log File (0000ms, 0284ms total)
+T2A28 000:462 DLL Compiled: Feb 13 2014 20:50:02 (0000ms, 0284ms total)
+T2A28 000:462 Logging started @ 2016-12-24 22:50 (0000ms, 0284ms total)
+T2A28 000:462 JLINK_SetWarnOutHandler(...) (0001ms, 0285ms total)
+T2A28 000:463 JLINK_OpenEx(...)
+Firmware: J-Link V9 compiled Sep  1 2016 18:29:50
+Hardware: V9.40
+S/N: 59407308
+Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash  returns O.K. (0281ms, 0566ms total)
+T2A28 000:744 JLINK_SetErrorOutHandler(...) (0000ms, 0566ms total)
+T2A28 000:744 JLINK_ExecCommand("ProjectFile = "E:\产品资料\stm32f030c8t6\STM32F030C8T6最小系统-V1.02\出厂程序\出厂程序\LED闪烁 + 串口\Project\JLinkSettings.ini"", ...)Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).  returns 0x00 (0015ms, 0581ms total)
+T2A28 000:771 JLINK_ExecCommand("Device = STM32F030C8", ...)Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).  returns 0x00 (0007ms, 0588ms total)
+T2A28 000:778 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x01 (0000ms, 0588ms total)
+T2A28 000:778 JLINK_GetHardwareVersion()  returns 0x16F30 (0000ms, 0588ms total)
+T2A28 000:778 JLINK_GetDLLVersion()  returns 48007 (0000ms, 0588ms total)
+T2A28 000:778 JLINK_GetFirmwareString(...) (0000ms, 0588ms total)
+T2A28 000:805 JLINK_GetDLLVersion()  returns 48007 (0000ms, 0588ms total)
+T2A28 000:805 JLINK_GetCompileDateTime() (0000ms, 0588ms total)
+T2A28 000:809 JLINK_GetFirmwareString(...) (0000ms, 0588ms total)
+T2A28 000:812 JLINK_GetHardwareVersion()  returns 0x16F30 (0000ms, 0588ms total)
+T2A28 000:823 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0003ms, 0591ms total)
+T2A28 000:826 JLINK_SetSpeed(2000) (0001ms, 0592ms total)
+T2A28 000:827 JLINK_GetId() >0x108 TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x108 TIF>  returns 0x00000000 (0407ms, 0999ms total)
+T2A28 004:918 JLINK_Close() (0001ms, 1000ms total)
+T2A28 004:918  (0002ms, 1001ms total)
+T2A28 004:918 Closed (0002ms, 1001ms total)

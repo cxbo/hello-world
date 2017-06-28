@@ -1,0 +1,10 @@
+..\output\stm32f0xx_gpio.o: ..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c
+..\output\stm32f0xx_gpio.o: ..\Library\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h
+..\output\stm32f0xx_gpio.o: C:\Keil5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include\stm32f0xx.h
+..\output\stm32f0xx_gpio.o: C:\Keil5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include\stm32f030x8.h
+..\output\stm32f0xx_gpio.o: ..\Library\CMSIS\Include\core_cm0.h
+..\output\stm32f0xx_gpio.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\stm32f0xx_gpio.o: ..\Library\CMSIS\Include\core_cmInstr.h
+..\output\stm32f0xx_gpio.o: ..\Library\CMSIS\Include\core_cmFunc.h
+..\output\stm32f0xx_gpio.o: C:\Keil5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include\system_stm32f0xx.h
+..\output\stm32f0xx_gpio.o: ..\Library\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h

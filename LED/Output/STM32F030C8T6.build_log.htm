@@ -1,0 +1,486 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: c Microsoft, Microsoft, LIC=R4HEV-P5HHY-AT23F-6T112-KND0T-A1A3L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.15.0
+Toolchain Path:  C:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.15.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+E:\STM32\STM32F030C8T6\STM32F030C8T6最小系统-V1.02\出厂程序\出厂程序\LED闪烁 + 串口\Project\STM32F030C8T6.uvprojx
+Project File Date:  01/09/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil5\ARM\ARMCC\Bin'
+Rebuild target 'STM32F030C8T6'
+assembling startup_stm32f030.s...
+compiling system_stm32f0xx.c...
+..\User\system_stm32f0xx.c(132): error:  #147: declaration is incompatible with "const uint8_t AHBPrescTable[16]" (declared at line 77 of "C:\Keil5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include\system_stm32f0xx.h")
+  
+_I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+..\User\system_stm32f0xx.c(242): error:  #20: identifier "HSI_VALUE" is undefined
+        SystemCoreClock = HSI_VALUE;
+..\User\system_stm32f0xx.c(245): error:  #20: identifier "HSE_VALUE" is undefined
+        SystemCoreClock = HSE_VALUE;
+..\User\system_stm32f0xx.c(249): error:  #20: identifier "RCC_CFGR_PLLMULL" is undefined
+        pllmull = 
+CC->CFGR & RCC_CFGR_PLLMULL;
+..\User\system_stm32f0xx.c(260): error:  #20: identifier "RCC_CFGR2_PREDIV1" is undefined
+          prediv1factor = (
+CC->CFGR2 & RCC_CFGR2_PREDIV1) + 1;
+..\User\system_stm32f0xx.c(297): error:  #20: identifier "HSE_STARTUP_TIMEOUT" is undefined
+    } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+..\User\system_stm32f0xx.c(320): error:  #20: identifier "RCC_CFGR_PLLMULL" is undefined
+      
+CC->CFGR &= (uint32_t)((uint32_t)~(
+CC_CFGR_PLLSRC | 
+CC_CFGR_PLLXTPRE | RCC_CFGR_PLLMULL));
+..\User\system_stm32f0xx.c(321): error:  #20: identifier "RCC_CFGR_PLLSRC_PREDIV1" is undefined
+      
+CC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLMULL6);
+..\User\system_stm32f0xx.c(321): error:  #20: identifier "RCC_CFGR_PLLXTPRE_PREDIV1" is undefined
+      
+CC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLMULL6);
+..\User\system_stm32f0xx.c(321): error:  #20: identifier "RCC_CFGR_PLLMULL6" is undefined
+      
+CC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLMULL6);
+..\User\system_stm32f0xx.c: 0 warnings, 10 errors
+compiling stm32f0xx_it.c...
+..\User\stm32f0xx_it.c(107): warning:  #223-D: function "GPIO_WriteBit" declared implicitly
+                
+oggle(GPIOC,GPIO_Pin_8);
+..\User\stm32f0xx_it.c(107): error:  #20: identifier "GPIO_Pin_8" is undefined
+                
+oggle(GPIOC,GPIO_Pin_8);
+..\User\stm32f0xx_it.c(107): error:  #20: identifier "BitAction" is undefined
+                
+oggle(GPIOC,GPIO_Pin_8);
+..\User\stm32f0xx_it.c(107): warning:  #223-D: function "GPIO_ReadOutputDataBit" declared implicitly
+                
+oggle(GPIOC,GPIO_Pin_8);
+..\User\stm32f0xx_it.c(118): warning:  #223-D: function "USART_GetITStatus" declared implicitly
+    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+..\User\stm32f0xx_it.c(118): error:  #20: identifier "USART_IT_RXNE" is undefined
+    if(USART_GetITStatus(
+SART1, USART_IT_RXNE) != RESET)
+..\User\stm32f0xx_it.c: 3 warnings, 3 errors
+compiling main.c...
+..\User\main.c(44): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+        GPIO_InitTypeDef  GPIO_InitStructure;
+..\User\main.c(45): warning:  #223-D: function "RCC_AHBPeriphClockCmd" declared implicitly
+        RCC_AHBPeriphClockCmd( RCC_AHBPeriph_GPIOC, ENABLE);                                                                                                                             
+..\User\main.c(45): error:  #20: identifier "RCC_AHBPeriph_GPIOC" is undefined
+        RCC_AHBPeriphClockCmd( RCC_AHBPeriph_GPIOC, ENABLE);                                                                                                                             
+..\User\main.c(46): error:  #20: identifier "GPIO_Pin_8" is undefined
+        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8|GPIO_Pin_13;                 
+..\User\main.c(46): error:  #20: identifier "GPIO_Pin_13" is undefined
+        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8|GPIO_Pin_13;                 
+..\User\main.c(47): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT; 
+..\User\main.c(48): error:  #20: identifier "GPIO_OType_PP" is undefined
+        GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+..\User\main.c(49): error:  #20: identifier "GPIO_PuPd_UP" is undefined
+        GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+..\User\main.c(50): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+        GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+..\User\main.c(51): warning:  #223-D: function "GPIO_Init" declared implicitly
+        GPIO_Init(GPIOC, &GPIO_InitStructure);
+..\User\main.c(55): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+                GPIO_InitTypeDef  GPIO_InitStructure;
+..\User\main.c(56): error:  #20: identifier "USART_InitTypeDef" is undefined
+                USART_InitTypeDef USART_InitStructure;
+..\User\main.c(57): error:  #20: identifier "NVIC_InitTypeDef" is undefined
+                NVIC_InitTypeDef        NVIC_InitStructure;
+..\User\main.c(62): warning:  #223-D: function "NVIC_Init" declared implicitly
+                NVIC_Init(&NVIC_InitStructure);
+..\User\main.c(64): warning:  #223-D: function "RCC_AHBPeriphClockCmd" declared implicitly
+                RCC_AHBPeriphClockCmd( RCC_AHBPeriph_GPIOA, ENABLE);
+..\User\main.c(64): error:  #20: identifier "RCC_AHBPeriph_GPIOA" is undefined
+                RCC_AHBPeriphClockCmd( RCC_AHBPeriph_GPIOA, ENABLE);
+..\User\main.c(65): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+                RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE );                                         
+..\User\main.c(65): error:  #20: identifier "RCC_APB2Periph_USART1" is undefined
+                RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE );                                         
+..\User\main.c(66): warning:  #223-D: function "GPIO_PinAFConfig" declared implicitly
+                GPIO_PinAFConfig(GPIOA,GPIO_PinSource9,GPIO_AF_1);
+..\User\main.c(66): error:  #20: identifier "GPIO_PinSource9" is undefined
+                GPIO_PinAFConfig(
+PIOA,GPIO_PinSource9,GPIO_AF_1);
+..\User\main.c(66): error:  #20: identifier "GPIO_AF_1" is undefined
+                GPIO_PinAFConfig(
+PIOA,GPIO_PinSource9,GPIO_AF_1);
+..\User\main.c(67): error:  #20: identifier "GPIO_PinSource10" is undefined
+                GPIO_PinAFConfig(
+PIOA,GPIO_PinSource10,GPIO_AF_1);                                                                                        
+..\User\main.c(68): error:  #20: identifier "GPIO_Pin_9" is undefined
+                GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9|GPIO_Pin_10;                 
+..\User\main.c(68): error:  #20: identifier "GPIO_Pin_10" is undefined
+                GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9|GPIO_Pin_10;                 
+..\User\main.c(69): error:  #20: identifier "GPIO_Mode_AF" is undefined
+                GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF; 
+..\User\main.c(70): error:  #20: identifier "GPIO_OType_PP" is undefined
+                GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+..\User\main.c(71): error:  #20: identifier "GPIO_PuPd_UP" is undefined
+                GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+..\User\main.c(72): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+                GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+..\User\main.c(73): warning:  #223-D: function "GPIO_Init" declared implicitly
+                GPIO_Init(GPIOA, &GPIO_InitStructure);   
+..\User\main.c(76): error:  #20: identifier "USART_WordLength_8b" is undefined
+                USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+..\User\main.c(77): error:  #20: identifier "USART_StopBits_1" is undefined
+                USART_InitStructure.USART_StopBits = USART_StopBits_1;
+..\User\main.c(78): error:  #20: identifier "USART_Parity_No" is undefined
+                USART_InitStructure.USART_Parity = USART_Parity_No;
+..\User\main.c(79): error:  #20: identifier "USART_HardwareFlowControl_None" is undefined
+                USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+..\User\main.c(80): error:  #20: identifier "USART_Mode_Rx" is undefined
+                USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+..\User\main.c(80): error:  #20: identifier "USART_Mode_Tx" is undefined
+                USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+..\User\main.c(81): warning:  #223-D: function "USART_Init" declared implicitly
+                USART_Init(USART1, &USART_InitStructure);
+..\User\main.c(83): warning:  #223-D: function "USART_Cmd" declared implicitly
+                USART_Cmd(USART1, ENABLE);
+..\User\main.c(84): warning:  #223-D: function "USART_ITConfig" declared implicitly
+                USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+..\User\main.c(84): error:  #20: identifier "USART_IT_RXNE" is undefined
+                USART_ITConfig(
+SART1,USART_IT_RXNE,ENABLE);
+..\User\main.c(103): warning:  #223-D: function "GPIO_WriteBit" declared implicitly
+                
+oggle(GPIOC,GPIO_Pin_13);
+..\User\main.c(103): error:  #20: identifier "GPIO_Pin_13" is undefined
+                
+oggle(GPIOC,GPIO_Pin_13);
+..\User\main.c: 11 warnings, 30 errors
+compiling stm32f0xx_gpio.c...
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(120): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(167): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(243): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_LIST_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(288): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(310): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(328): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(350): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(366): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(383): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(404): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(427): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c(477): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_GPIO_LIST_PERIPH(GPIOx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c: 12 warnings, 0 errors
+compiling stm32f0xx_misc.c...
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c(82): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c(118): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_NVIC_LP(LowPowerMode));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c(143): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_SYSTICK_CLK_SOURCE(SysTick_CLKSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c: 3 warnings, 0 errors
+compiling stm32f0xx_rcc.c...
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(204): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HSE(RCC_HSE));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(238): error:  #20: identifier "HSE_STARTUP_TIMEOUT" is undefined
+    } while((StartUpCounter != HSE_STARTUP_TIMEOUT) && (HSEStatus == RESET));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(266): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HSI_CALIBRATION_VALUE(HSICalibrationValue));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(298): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(326): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_HSI14_CALIBRATION_VALUE(HSI14CalibrationValue));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(355): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(376): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(408): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_LSE(RCC_LSE));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(434): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_LSE_DRIVE(RCC_LSEDrive));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(458): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(489): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PLL_SOURCE(RCC_PLLSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(489): error:  #20: identifier "RCC_CFGR_PLLSRC_HSI_Div2" is undefined
+    assert_param(
+S_RCC_PLL_SOURCE(RCC_PLLSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(489): error:  #20: identifier "RCC_CFGR_PLLSRC_PREDIV1" is undefined
+    assert_param(
+S_RCC_PLL_SOURCE(RCC_PLLSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL2" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL3" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL4" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL5" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL6" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL7" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL8" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL9" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL10" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL11" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL12" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL13" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL14" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL15" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(490): error:  #20: identifier "RCC_CFGR_PLLMULL16" is undefined
+    assert_param(
+S_RCC_PLL_MUL(RCC_PLLMul));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(493): error:  #20: identifier "RCC_CFGR_PLLMULL" is undefined
+    
+CC->CFGR &= ~(RCC_CFGR_PLLMULL | RCC_CFGR_PLLSRC);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(513): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_FUNCTIONAL_STATE(NewState));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV1" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV2" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV3" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV4" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV5" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV6" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV7" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV8" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV9" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV10" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c(537): error:  #20: identifier "RCC_CFGR2_PREDIV1_DIV11" is undefined
+    assert_param(
+S_RCC_PREDIV1(RCC_PREDIV1_Div));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c: 12 warnings, 30 errors
+compiling stm32f0xx_usart.c...
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(175): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(206): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(333): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(378): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(407): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(437): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(463): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(491): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(523): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(557): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(588): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(613): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(639): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(660): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(707): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(714): error:  #20: identifier "USART_CR1_UESM" is undefined
+      USARTx->CR1 |= USART_CR1_UESM;
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(720): error:  #20: identifier "USART_CR1_UESM" is undefined
+      USARTx->CR1 &= (uint32_t)~((uint32_t)USART_CR1_UESM);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(738): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(739): error:  #20: identifier "USART_CR3_WUS_1" is undefined
+    assert_param(
+S_USART_STOPMODE_WAKEUPSOURCE(USART_WakeUpSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(739): error:  #20: identifier "USART_CR3_WUS_0" is undefined
+    assert_param(
+S_USART_STOPMODE_WAKEUPSOURCE(USART_WakeUpSource));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(741): error:  #20: identifier "USART_CR3_WUS" is undefined
+    USARTx->CR3 &= (uint32_t)~((uint32_t)USART_CR3_WUS);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(788): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(818): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(860): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(875): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(924): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(942): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(969): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(988): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1051): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1052): error:  #20: identifier "USART_CR2_LBDL" is undefined
+    assert_param(
+S_USART_LIN_BREAK_DETECT_LENGTH(USART_LINBreakDetectLength));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1068): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1074): error:  #20: identifier "USART_CR2_LINEN" is undefined
+      USARTx->CR2 |= USART_CR2_LINEN;
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1079): error:  #20: identifier "USART_CR2_LINEN" is undefined
+      USARTx->CR2 &= (uint32_t)~((uint32_t)USART_CR2_LINEN);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1124): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1204): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1222): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1227): error:  #20: identifier "USART_CR3_SCEN" is undefined
+      USARTx->CR3 |= USART_CR3_SCEN;
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1232): error:  #20: identifier "USART_CR3_SCEN" is undefined
+      USARTx->CR3 &= (uint32_t)~((uint32_t)USART_CR3_SCEN);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1246): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx)); 
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1251): error:  #20: identifier "USART_CR3_NACK" is undefined
+      USARTx->CR3 |= USART_CR3_NACK;
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1256): error:  #20: identifier "USART_CR3_NACK" is undefined
+      USARTx->CR3 &= (uint32_t)~((uint32_t)USART_CR3_NACK);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1269): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1272): error:  #20: identifier "USART_CR3_SCARCNT" is undefined
+    USARTx->CR3 &= (uint32_t)~((uint32_t)USART_CR3_SCARCNT);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1286): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1348): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1349): error:  #20: identifier "USART_CR3_IRLP" is undefined
+    assert_param(
+S_USART_IRDA_MODE(USART_IrDAMode));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1365): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_1_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1371): error:  #20: identifier "USART_CR3_IREN" is undefined
+      USARTx->CR3 |= USART_CR3_IREN;
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1376): error:  #20: identifier "USART_CR3_IREN" is undefined
+      USARTx->CR3 &= (uint32_t)~((uint32_t)USART_CR3_IREN);
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1422): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1448): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1465): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1484): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1530): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1562): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1696): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1747): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1748): error:  #20: identifier "USART_RQR_TXFRQ" is undefined
+    assert_param(
+S_USART_REQUEST(USART_Request));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1779): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1821): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1822): error:  #20: identifier "USART_ISR_LBD" is undefined
+    assert_param(
+S_USART_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1822): error:  #20: identifier "USART_ISR_EOBF" is undefined
+    assert_param(
+S_USART_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1822): error:  #20: identifier "USART_ISR_RWU" is undefined
+    assert_param(
+S_USART_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1822): error:  #20: identifier "USART_ISR_WUF" is undefined
+    assert_param(
+S_USART_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1868): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1869): error:  #20: identifier "USART_ISR_WUF" is undefined
+    assert_param(
+S_USART_CLEAR_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1869): error:  #20: identifier "USART_ISR_LBD" is undefined
+    assert_param(
+S_USART_CLEAR_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1869): error:  #20: identifier "USART_ISR_EOBF" is undefined
+    assert_param(
+S_USART_CLEAR_FLAG(USART_FLAG));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1900): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c(1970): warning:  #223-D: function "assert_param" declared implicitly
+    assert_param(IS_USART_ALL_PERIPH(USARTx));
+..\Library\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c: 47 warnings, 24 errors
+"..\Output\STM32F030C8T6.axf" - 97 Error(s), 88 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\STM32\STM32F030C8T6\STM32F030C8T6最小系统-V1.02\出厂程序\出厂程序\LED闪烁 + 串口\Project\RTE
+  C:\Keil5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>
